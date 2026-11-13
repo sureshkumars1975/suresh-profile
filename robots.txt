@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sureshkumars1975.github.io/suresh-profile/sitemap.xml
