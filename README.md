@@ -40,10 +40,17 @@ The "Download CV" button is hidden while `profile.cv` is `null`. The old CV cont
 data (Aadhaar, PAN, DOB, address) and is git-ignored. To re-enable, add a cleaned PDF to `public/`
 and set `cv: "/your-file.pdf"` in `src/data/profile.js`.
 
-## Deploy
+## Deploy (GitHub Pages)
 
-Hosted on Vercel from https://github.com/sureshkumars1975/suresh-profile (branch `main`).
-Import the repo at https://vercel.com/new (framework preset: **Vite**, build `npm run build`,
-output `dist`). Every push to `main` then redeploys automatically. `vercel.json` rewrites
-client-side routes (`/publications`, `/gallery`, …) to `index.html`.
-# suresh-profile
+Live site: https://sureshkumars1975.github.io/suresh-profile/
+
+- **Automatic:** every push to `main` runs `.github/workflows/deploy.yml`, which builds with
+  `npm run build:gh` and publishes `dist/` to the `gh-pages` branch (live in ~1 minute).
+- **Manual:** `npm run deploy` does the same from your machine.
+
+`build:gh` builds with base path `/suresh-profile/`, copies `index.html` into each route folder
+(`publications/`, `certificates/`, `gallery/`) so deep links return HTTP 200, and adds a `404.html`
+fallback. Local `npm run dev` / `npm run build` still use base `/`.
+
+Never put personal documents in `public/` — everything there is published. Use the git-ignored
+`private/` folder instead.
