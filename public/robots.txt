@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://suresh-rec.vercel.app/sitemap.xml
+Sitemap: https://sureshkumars1975.github.io/suresh-profile/sitemap.xml

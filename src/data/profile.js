@@ -1,5 +1,9 @@
 // All site content lives here. Edit this file to update the portfolio.
 
+/** Prefix a public/ file path with the deploy base ("/" locally, "/suresh-profile/" on GitHub Pages). */
+const BASE = import.meta.env?.BASE_URL ?? "/";
+export const asset = (path) => `${BASE}${path.replace(/^\//, "")}`;
+
 export const profile = {
   name: "Dr. Suresh Kumar S",
   firstLine: "Dr. Suresh",
@@ -9,9 +13,9 @@ export const profile = {
     "Professor and Researcher with expertise in Machine Learning, Deep Learning, and IoT. Dedicated to advancing technology through research and education.",
   about:
     "Professor and Researcher with over 20 years of experience in Computer Science and Engineering. Specializing in Machine Learning, Deep Learning, and IoT, dedicated to advancing technology through research and education.",
-  photo: "/suresh.jpg",
+  photo: asset("/suresh.jpg"),
   // CV download is hidden until a version without personal ID data (Aadhaar, PAN, DOB, address)
-  // is available. Put the new file in public/ and set e.g. cv: "/cv-suresh-kumar.pdf".
+  // is available. Put the new file in public/ and set e.g. cv: asset("/cv-suresh-kumar.pdf").
   cv: null,
   email: "sureshkumar.s@rajalakshmi.edu.in",
   phone: "+91 9941137810",
@@ -297,7 +301,7 @@ export const patents = [
     published: "11 September 2026",
     applicant: "Rajalakshmi Engineering College (Autonomous)",
     coInventors: "Dr. Sudalaimuthu T",
-    pdf: "/patents/202641096262.pdf",
+    pdf: asset("/patents/202641096262.pdf"),
   },
   {
     title:
@@ -310,7 +314,7 @@ export const patents = [
     published: "11 September 2026",
     applicant: "Rajalakshmi Engineering College",
     coInventors: "Dr. Sudalaimuthu T",
-    pdf: "/patents/202641104360.pdf",
+    pdf: asset("/patents/202641104360.pdf"),
   },
   {
     title: "AI Tutoring System and Method to Prevent Learner Over-Reliance",
@@ -322,7 +326,7 @@ export const patents = [
     published: "2 October 2026",
     applicant: "Rajalakshmi Engineering College",
     coInventors: "Dr. Sudalaimuthu T",
-    pdf: "/patents/202641113938.pdf",
+    pdf: asset("/patents/202641113938.pdf"),
   },
 ];
 
@@ -372,85 +376,85 @@ export const certificates = [
     title: "Reliable Google Cloud Infrastructure: Design and Process",
     date: "July 26, 2020",
     issuer: "Google Cloud & Coursera",
-    image: "/certificates/c1.jpeg",
+    image: asset("/certificates/c1.jpeg"),
     verify: "https://coursera.org/verify/LUHGP2sCS9TN",
   },
   {
     title: "Creating New BigQuery Datasets and Visualizing Insights",
     date: "August 09, 2020",
     issuer: "Google Cloud & Coursera",
-    image: "/certificates/c2.jpeg",
+    image: asset("/certificates/c2.jpeg"),
     verify: "https://coursera.org/verify/LK3BUNPDRLL9",
   },
   {
     title: "Oracle Autonomous Database Cloud 2019 Certified Specialist",
     date: "April 18, 2020",
     issuer: "Oracle University",
-    image: "/certificates/c3.jpeg",
+    image: asset("/certificates/c3.jpeg"),
     certId: "274Z20634OADB19-F",
   },
   {
     title: "Exploring and Preparing your Data with BigQuery",
     date: "July 31, 2020",
     issuer: "Google Cloud & Coursera",
-    image: "/certificates/c4.jpeg",
+    image: asset("/certificates/c4.jpeg"),
     verify: "https://coursera.org/verify/VG3XS98CGU7R",
   },
   {
     title: "Build Your Portfolio Website with HTML and CSS",
     date: "June 07, 2020",
     issuer: "Coursera Project Network",
-    image: "/certificates/c5.jpeg",
+    image: asset("/certificates/c5.jpeg"),
     verify: "https://coursera.org/verify/2ZE3MNQSKQRW",
   },
   {
     title: "Essential Google Cloud Infrastructure: Core Services",
     date: "July 23, 2020",
     issuer: "Google Cloud & Coursera",
-    image: "/certificates/c6.jpeg",
+    image: asset("/certificates/c6.jpeg"),
     verify: "https://coursera.org/verify/QCDPLMSFFMKK",
   },
   {
     title: "Essential Google Cloud Infrastructure: Foundation",
     date: "July 22, 2020",
     issuer: "Google Cloud & Coursera",
-    image: "/certificates/c7.jpeg",
+    image: asset("/certificates/c7.jpeg"),
     verify: "https://coursera.org/verify/SRWGNZ8QEXQ9",
   },
   {
     title: "Google Cloud Platform Fundamentals: Core Infrastructure",
     date: "July 08, 2020",
     issuer: "Google Cloud & Coursera",
-    image: "/certificates/c8.jpeg",
+    image: asset("/certificates/c8.jpeg"),
     verify: "https://coursera.org/verify/8D9GM9CSNQZQ",
   },
   {
     title: "Elastic Google Cloud Infrastructure: Scaling and Automation",
     date: "July 25, 2020",
     issuer: "Google Cloud & Coursera",
-    image: "/certificates/c9.jpeg",
+    image: asset("/certificates/c9.jpeg"),
     verify: "https://coursera.org/verify/4BRPA4AMZWES",
   },
   {
     title: "Hands-on Workshop on Recent Trends",
     date: "July 03, 2025",
     issuer: "Indian Institute of Information Technology Kottayam",
-    image: "/certificates/c10.jpg",
+    image: asset("/certificates/c10.jpg"),
   },
 ];
 
 export const gallery = [
-  { src: "/gallery/1.jpg", title: "Award Ceremony", description: "Receiving recognition for academic excellence" },
-  { src: "/gallery/2.jpg", title: "Smart City Workshop", description: "Presenting on IoT applications in smart cities" },
-  { src: "/gallery/3.jpg", title: "Student Interaction", description: "Engaging with students during a technical session" },
-  { src: "/gallery/5.jpg", title: "Award Recognition", description: "Receiving departmental excellence award" },
-  { src: "/gallery/photo-2.jpg", title: "Academic Achievement", description: "Recognition ceremony at Rajalakshmi Engineering College" },
-  { src: "/gallery/broucher.jpg", title: "FDP Program", description: "Faculty Development Program on Cloud Technology" },
-  { src: "/gallery/7.jpg", title: "FDP Program", description: "Faculty Development Program on Recent Trends in Next Generation Technologies" },
-  { src: "/gallery/8.jpg", title: "ResearchGate Achievement", description: "Appreciation from ResearchGate for publications" },
+  { src: asset("/gallery/1.jpg"), title: "Award Ceremony", description: "Receiving recognition for academic excellence" },
+  { src: asset("/gallery/2.jpg"), title: "Smart City Workshop", description: "Presenting on IoT applications in smart cities" },
+  { src: asset("/gallery/3.jpg"), title: "Student Interaction", description: "Engaging with students during a technical session" },
+  { src: asset("/gallery/5.jpg"), title: "Award Recognition", description: "Receiving departmental excellence award" },
+  { src: asset("/gallery/photo-2.jpg"), title: "Academic Achievement", description: "Recognition ceremony at Rajalakshmi Engineering College" },
+  { src: asset("/gallery/broucher.jpg"), title: "FDP Program", description: "Faculty Development Program on Cloud Technology" },
+  { src: asset("/gallery/7.jpg"), title: "FDP Program", description: "Faculty Development Program on Recent Trends in Next Generation Technologies" },
+  { src: asset("/gallery/8.jpg"), title: "ResearchGate Achievement", description: "Appreciation from ResearchGate for publications" },
 ];
 
-/** "/gallery/2.jpg" -> "/gallery/thumbs/2.jpg" (800px-wide card image). */
+/** asset("/gallery/2.jpg") -> asset("/gallery/thumbs/2.jpg") (800px-wide card image). */
 export const thumbOf = (src) => src.replace(/\/([^/]+)\.(jpe?g|png)$/i, "/thumbs/$1.jpg");
 
 export const certificateSlides = certificates.map((c) => ({ src: c.image, title: c.title, description: c.issuer }));

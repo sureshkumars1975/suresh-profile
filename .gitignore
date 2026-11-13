@@ -3,5 +3,5 @@ dist
 .DS_Store
 *.local
 
-# Contains personal ID data (Aadhaar, PAN, DOB, address) - never commit
-public/cv-suresh-kumar.pdf
+# Personal files that must never be committed or deployed (e.g. old CV with Aadhaar/PAN/DOB/address)
+private/
