@@ -1,0 +1,7 @@
+node_modules
+dist
+.DS_Store
+*.local
+
+# Contains personal ID data (Aadhaar, PAN, DOB, address) - never commit
+public/cv-suresh-kumar.pdf

@@ -34,7 +34,16 @@ sips -s format jpeg -s formatOptions 72 --resampleWidth 800 public/gallery/NEW.j
 Uses FormSubmit (`https://formsubmit.co/ajax/<email>`). The first submission sends an
 activation email to the address in `profile.js`, which must be confirmed once.
 
+## CV download
+
+The "Download CV" button is hidden while `profile.cv` is `null`. The old CV contained personal ID
+data (Aadhaar, PAN, DOB, address) and is git-ignored. To re-enable, add a cleaned PDF to `public/`
+and set `cv: "/your-file.pdf"` in `src/data/profile.js`.
+
 ## Deploy
 
-`vercel.json` already rewrites client-side routes to `index.html` for Vercel.
+Hosted on Vercel from https://github.com/sureshkumars1975/suresh-profile (branch `main`).
+Import the repo at https://vercel.com/new (framework preset: **Vite**, build `npm run build`,
+output `dist`). Every push to `main` then redeploys automatically. `vercel.json` rewrites
+client-side routes (`/publications`, `/gallery`, …) to `index.html`.
 # suresh-profile
